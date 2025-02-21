@@ -1,0 +1,18 @@
+.taks-input {
+    width: 100%;
+    height: 60px;
+}
+
+.taks-input input, .taks-input button {
+    height: 100%;
+    border-radius: 30px;
+}
+
+.taks-input input {
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.taks-input button {
+    width: 130px;
+}
