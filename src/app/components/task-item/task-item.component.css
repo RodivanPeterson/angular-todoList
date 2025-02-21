@@ -1,0 +1,61 @@
+.task-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px;
+}
+
+.task-item input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+.task-item input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+
+    display: grid;
+    place-content: center;
+}
+
+.task-item input[type="checkbox"]:checked {
+    background-color: #167347;
+}
+
+.task-item input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+
+    transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.task-item input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.task-item span {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-grow: 1;
+}
+
+.task-item button {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: none;
+}
